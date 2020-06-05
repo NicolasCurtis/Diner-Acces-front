@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, ImageBackground  } from 'react-native';
 
-export default function App() {
+export default function Login(navigation) {
 
   
 const [signUpFirstName, setSignUpFirstName] = useState('');
@@ -13,28 +13,6 @@ const [signInEmail, setSignInEmail] = useState('');
 const [signInPassword, setSignInPassword] = useState('');
 
 const [userExists, setUserExists] = useState(false)
-
-// var handleSubmitSignUp = async () => {
-//   const data = await fetch('sign-up',{
-//     method : 'POST',
-//     headers : {'Content-Type'  :'application/x-www-form-urlencoded'},
-//     body : `firstNameFromFront=${signUpFirstName}&lastNameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
-//   }
-// )
-
-// const body = await data.json();
-
-//   if(body.result === true) {
-//     setUserExists(true)
-
-//   if(userExists) {
-//     return 
-//   }
-
-//   }
-
-// }
-
 
   return (
     
@@ -73,7 +51,7 @@ const [userExists, setUserExists] = useState(false)
 <Text></Text>
 
 <Button
-  onPress={onPressLearnMore}
+  onPress ={()=>navigation.navigate("mapScreens")}
   title="Inscription"
   color="#DC3F3F"
   
@@ -97,7 +75,7 @@ const [userExists, setUserExists] = useState(false)
 <Text></Text>
 
 <Button
-  onPress={onPressLearnMore}
+  onPress ={()=>navigation.navigate("mapScreens")}
   title="Connexion"
   color="#DC3F3F"
   />
