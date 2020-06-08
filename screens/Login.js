@@ -15,7 +15,7 @@ export default function Login({ navigation }) {
 
 
   var handleSubmitSignUp = async () => {
-    const data = await fetch("http://172.17.190.54:3000/sign-up", {
+    const data = await fetch("http://192.168.1.40:3000/sign-up", {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
@@ -28,7 +28,7 @@ export default function Login({ navigation }) {
     }
 
     var handleSubmitSignIn = async () => {
-      const data = await fetch("http://172.17.190.54:3000/sign-in", {
+      const data = await fetch("http://192.168.1.40:3000/sign-in", {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `emailFromFront=${signInEmail}&passwordFromFront=${signInPassword}`
@@ -46,7 +46,7 @@ export default function Login({ navigation }) {
 
 
     <View style={styles.container}>
-      <Text style={{ fontSize: 50, fontStyle: "italic", color: "#FB0B00" }}>Diner Access </Text>
+      <Text style={{ fontSize: 55, fontStyle: "italic", color: "#FFCB44" }}>Diner Access </Text>
       <Text></Text>
       <Text></Text>
 
@@ -82,7 +82,7 @@ export default function Login({ navigation }) {
       <Button
         onPress={() => handleSubmitSignUp()}
         title="Inscription"
-        color="#DC3F3F"
+        color="#FFCB44"
 
 
       />
@@ -107,7 +107,7 @@ export default function Login({ navigation }) {
       <Button
         onPress={() => handleSubmitSignIn()}
         title="Connexion"
-        color="#DC3F3F"
+        color="#FFCB44"
       />
 
     </View>
@@ -119,7 +119,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00CCDF',
+    backgroundColor: '#A0A0A0',
     alignItems: 'center',
     justifyContent: 'center',
   },

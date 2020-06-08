@@ -66,15 +66,16 @@ export default HomePage = () => {
               <ScrollView 
               horizontal = {true} pagingEnabled style = {{ width, height}}> 
 
-              {
-                card.map((image, index) => {
+              {/* {
+                card.map((image, index) => (
                   <Image
                   key = {{index}}
                   source={{ uri : image}}
                   style={{ width, height, resizeMode: 'cover'}}
                 )
-                }
-                }
+                ) */}
+    
+                
                
                 
               <Image

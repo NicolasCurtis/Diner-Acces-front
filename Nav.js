@@ -4,10 +4,12 @@ import {createAppContainer } from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
-import mapScreens from './screens/mapScreens';
+//import MapScreens from './screens/mapScreens';
 import Login from './screens/Login'
 import Favoris from './screens/Favoris'
 import HomePage from './screens/HomePage'
+import Reservation from './screens/reservation';
+import MapScreens from './screens/mapScreens'
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -15,8 +17,9 @@ import { Ionicons } from '@expo/vector-icons';
 
 const BottomNavigator = createBottomTabNavigator({
   Accueil: HomePage,
-  Map: mapScreens,
-  Favoris: Favoris
+  Map: MapScreens,
+  Favoris: Favoris,
+  Reservation: Reservation,
 },
 {
   defaultNavigationOptions: ({ navigation }) => ({
@@ -33,10 +36,10 @@ const BottomNavigator = createBottomTabNavigator({
     },
   }),
   tabBarOptions: {
-    activeTintColor: '#eb4d4b',
+    activeTintColor: '#FFCB44',
     inactiveTintColor: '#FFFFFF',
     style: {
-      backgroundColor: '#1500FF',
+      backgroundColor: '#A0A0A0',
     }
   }
  
