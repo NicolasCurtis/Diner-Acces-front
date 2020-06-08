@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-console.disableYellowBox = true;
-
-import React from 'react';
-import {View} from 'react-native';
-
-import Navigation from './Nav';
-
-export default function App(){
-  return (
-    <View style={{flex: 1}}>
-      <Navigation />
-    </View>
-  )
-}
-=======
 import React, {useState} from "react";
 import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, ScrollView} from 'react-native'
 import {Card, Icon } from 'react-native-elements';
@@ -98,7 +82,7 @@ export default HomePage = () => {
 
             <View style = {{height : 240, flex : 1 }}>
              
-              <ScrollView horizontal={true}>
+
                 <Card
                   
                   image={require('./assets/resto.jpg')}>
@@ -146,7 +130,7 @@ export default HomePage = () => {
 
                 </Card>
 
-                </ScrollView>
+            
           </View>    
         </View>
 
@@ -260,4 +244,3 @@ const styles = StyleSheet.create({
     
     
   })
->>>>>>> 2d46cf1f49d92a8e204c5016fcb498898330dcd5

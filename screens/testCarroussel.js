@@ -1,28 +1,27 @@
-<<<<<<< HEAD
-console.disableYellowBox = true;
-
-import React from 'react';
-import {View} from 'react-native';
-
-import Navigation from './Nav';
-
-export default function App(){
-  return (
-    <View style={{flex: 1}}>
-      <Navigation />
-    </View>
-  )
-}
-=======
 import React, {useState} from "react";
-import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, ScrollView} from 'react-native'
+import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, ScrollView, Dimensions} from 'react-native'
 import {Card, Icon } from 'react-native-elements';
 import { faHeart, faStar, faVideo} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { CardStyleInterpolators } from "react-navigation-stack";
 
- 
+ const {width} = Dimensions.get("window");
+ const card = [
+   {
+     uri : 'https://www.ahstatic.com/photos/1146_rsr003_00_p_1024x768.jpg' ,title : title, note: note
+   },
+   {
+    uri : 'https://restaurantdupalaisroyal.com/wp-content/uploads/2020/02/Restaurant_du_Palais_Royal_RDC_11_GdeLaubier.jpg' ,title : title, note: note
+  },
+  {
+    uri : 'https://www.ilristorante.fr/wp-content/uploads/2019/12/Il-ristorante-restaurant-italien.jpg' ,title : title, note: note
+  },
+  {
+    uri : 'https://c.tfstatic.com/w_656,h_368,c_fill,g_auto:subject,q_auto,f_auto/restaurant_photos/577/209577/source/restaurant-h-vue-de-la-salle-bdb5e.jpg' ,title : title, note: note
+  },
+ ]
+
 export default HomePage = () => {
 
   const [serch,setSearch] = useState('')
@@ -57,96 +56,77 @@ export default HomePage = () => {
         
          <ScrollView> 
         
-           <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
+         <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
 
               <Text style={{fontSize : 24, fontWeight  :'700', paddingHorizontal : 10, marginTop : 20}}>
                 Les plus populaires
               </Text>
 
-              <View style = {{height : 130}}>
+             
+              <ScrollView 
+              horizontal = {true} pagingEnabled style = {{ width, height}}> 
 
-                <ScrollView 
-                horizontal = {true}>
-                
+              {
+                card.map((image, index) => {
                   <Image
-                    source={require('./assets/resto.jpg')}
-                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                    name = "nom du restaurant"
-                  />
+                  key = {{index}}
+                  source={{ uri : image}}
+                  style={{ width, height, resizeMode: 'cover'}}
+                )
+                }
+                }
+               
+                
+              <Image
+                source={require('./assets/resto.jpg')}
+                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                name = "nom du restaurant"
+              />
 
-                    <Image
-                    source={require('./assets/resto.jpg')}
-                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                    name = "nom du restaurant"
-                  />
+                <Image
+                source={require('./assets/resto.jpg')}
+                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                name = "nom du restaurant"
+              />
 
-                    <Image
-                    source={require('./assets/resto.jpg')}
-                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                    name = "nom du restaurant"
-                  /> 
+                <Image
+                source={require('./assets/resto.jpg')}
+                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                name = "nom du restaurant"
+              /> 
 
-                </ScrollView>
-               </View>    
-             </View>
-
-            <View style = {{ flex :1, backgroundColor : 'white', paddingTop : 20}}>
+            </ScrollView>
+            </View>     
+            
+            <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
 
               <Text style={{fontSize : 24, fontWeight  :'700', paddingHorizontal : 10, paddingBottom : 20}}>
                 Meilleurs avis
               </Text>
 
-            <View style = {{height : 240, flex : 1 }}>
-             
-              <ScrollView horizontal={true}>
-                <Card
-                  
-                  image={require('./assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  <Text style={{marginBottom: 10}}>
-                   note
-                  </Text>
-                  
-
-                </Card>
+            <View style = {{height : 130}}>
+            <ScrollView 
+              horizontal = {true}>
                 
-                
-             
-                <Card
-                  
-                  image={require('./assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  
-
-                </Card>
+              <Image
+                source={require('./assets/resto.jpg')}
+                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                name = "nom du restaurant"
+              />
           
-                
-                <Card
-                  style = {{ height : 150,  marginTop : 20, marginRight : 8}}
-                  image={require('./assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  
+                <Image
+                source={require('./assets/resto.jpg')}
+                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                name = "nom du restaurant"
+              />
 
-                </Card>
+                <Image
+                source={require('./assets/resto.jpg')}
+                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                name = "nom du restaurant"
+              /> 
 
-               
-                <Card
-                  style = {{ height : 150,  marginTop : 20, marginRight : 8}}
-                  image={require('./assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  
-
-                </Card>
-
-                </ScrollView>
+            </ScrollView>
           </View>    
         </View>
 
@@ -228,7 +208,7 @@ const styles = StyleSheet.create({
   
   });
   
-  const cardstest = StyleSheet.create({
+  const cards = StyleSheet.create({
     container: {
       marginTop : 20,
       backgroundColor: 'white'
@@ -260,4 +240,4 @@ const styles = StyleSheet.create({
     
     
   })
->>>>>>> 2d46cf1f49d92a8e204c5016fcb498898330dcd5
+  
