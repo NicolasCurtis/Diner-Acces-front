@@ -39,7 +39,7 @@ const BottomNavigator = createBottomTabNavigator({
     activeTintColor: '#FFCB44',
     inactiveTintColor: '#FFFFFF',
     style: {
-      backgroundColor: '#A0A0A0',
+      backgroundColor: '#00D1BD',
     }
   }
  

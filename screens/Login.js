@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, ImageBackground, Alert,
+  Modal,} from 'react-native';
 
 export default function Login({ navigation }) {
 
@@ -11,6 +12,7 @@ export default function Login({ navigation }) {
 
   const [signInEmail, setSignInEmail] = useState('');
   const [signInPassword, setSignInPassword] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
 
 
 
@@ -21,8 +23,9 @@ export default function Login({ navigation }) {
       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
     })
     const body = await data.json()
+    console.log(body)
     if (body.result == true) {
-      navigation.navigate("Map")
+      navigation.navigate("Accueil")
     }
       
     }
@@ -36,11 +39,14 @@ export default function Login({ navigation }) {
       const body = await data.json()
       console.log(body)
       if (body.result == true) {
-        navigation.navigate("Map")
+        navigation.navigate("Accueil")
       }
         
-      }
+    }
+      
   
+
+        //var myRegex = /[\w.+-]{1,64}@([a-zA-Z\d-]{2,252}\.[a-zA-Z\.]{2,6}){5,255}$
 
   return (
 
@@ -61,7 +67,6 @@ export default function Login({ navigation }) {
         onChangeText={(e) => setSignUpLastName(e)}
         style={{ width: 250, height: 50, borderColor: 'gray', borderWidth: 1, marginBottom: 5, backgroundColor: "white", paddingLeft: 5 }}
         placeholder="Nom"
-
       />
 
       <TextInput
@@ -119,7 +124,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#A0A0A0',
+    backgroundColor: '#00D1BD',
     alignItems: 'center',
     justifyContent: 'center',
   },
