@@ -7,12 +7,14 @@ import {createStackNavigator} from 'react-navigation-stack';
 import mapScreens from './screens/mapScreens';
 import Login from './screens/Login'
 import Favoris from './screens/Favoris'
+import HomePage from './screens/HomePage'
 
 import { Ionicons } from '@expo/vector-icons';
 
 
 
 const BottomNavigator = createBottomTabNavigator({
+  Accueil: HomePage,
   Map: mapScreens,
   Favoris: Favoris
 },
@@ -24,7 +26,8 @@ const BottomNavigator = createBottomTabNavigator({
         iconName = "ios-map";
       } else if (navigation.state.routeName == 'Favoris') {
         iconName = "md-heart";
-      } 
+      } else if (navigation.state.routeName == 'Accueil') {
+        iconName = "ios-restaurant";}
 
       return <Ionicons name={iconName} size={25} color={tintColor} />;
     },

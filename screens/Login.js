@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, ImageBackground } from 'react-native';
 
-<<<<<<< HEAD
 export default function Login({ navigation }) {
-=======
-export default function Login() {
->>>>>>> 2d46cf1f49d92a8e204c5016fcb498898330dcd5
 
 
   const [signUpFirstName, setSignUpFirstName] = useState('');
@@ -13,20 +9,8 @@ export default function Login() {
   const [signUpEmail, setSignUpEmail] = useState('');
   const [signUpPassword, setSignUpPassword] = useState('');
 
-<<<<<<< HEAD
   const [signInEmail, setSignInEmail] = useState('');
   const [signInPassword, setSignInPassword] = useState('');
-=======
-
-
-// var handleSubmitSignUp = async () => {
-//   const data = await fetch('sign-up',{
-//     method : 'POST',
-//     headers : {'Content-Type'  :'application/x-www-form-urlencoded'},
-//     body : `firstNameFromFront=${signUpFirstName}&lastNameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
-//   }
-// )
->>>>>>> 2d46cf1f49d92a8e204c5016fcb498898330dcd5
 
 
 

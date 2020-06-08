@@ -1,12 +1,7 @@
 import React, {useState} from "react";
 import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, ScrollView} from 'react-native'
-import {Card, Icon } from 'react-native-elements';
-import { faHeart, faStar, faVideo} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { CardStyleInterpolators } from "react-navigation-stack";
+import {Card } from 'react-native-elements';
 
- 
 export default HomePage = () => {
 
   const [serch,setSearch] = useState('')
@@ -53,19 +48,19 @@ export default HomePage = () => {
                 horizontal = {true}>
                 
                   <Image
-                    source={require('./assets/resto.jpg')}
+                    source={require('../assets/resto.jpg')}
                     style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
                     name = "nom du restaurant"
                   />
 
                     <Image
-                    source={require('./assets/resto.jpg')}
+                    source={require('../assets/resto.jpg')}
                     style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
                     name = "nom du restaurant"
                   />
 
                     <Image
-                    source={require('./assets/resto.jpg')}
+                    source={require('../assets/resto.jpg')}
                     style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
                     name = "nom du restaurant"
                   /> 
@@ -85,7 +80,7 @@ export default HomePage = () => {
 
                 <Card
                   
-                  image={require('./assets/resto.jpg')}>
+                  image={require('../assets/resto.jpg')}>
                   <Text style={{marginBottom: 10}}>
                     Nom du resto
                   </Text>
@@ -100,7 +95,7 @@ export default HomePage = () => {
              
                 <Card
                   
-                  image={require('./assets/resto.jpg')}>
+                  image={require('../assets/resto.jpg')}>
                   <Text style={{marginBottom: 10}}>
                     Nom du resto
                   </Text>
@@ -111,7 +106,7 @@ export default HomePage = () => {
                 
                 <Card
                   style = {{ height : 150,  marginTop : 20, marginRight : 8}}
-                  image={require('./assets/resto.jpg')}>
+                  image={require('../assets/resto.jpg')}>
                   <Text style={{marginBottom: 10}}>
                     Nom du resto
                   </Text>
@@ -122,7 +117,7 @@ export default HomePage = () => {
                
                 <Card
                   style = {{ height : 150,  marginTop : 20, marginRight : 8}}
-                  image={require('./assets/resto.jpg')}>
+                  image={require('../assets/resto.jpg')}>
                   <Text style={{marginBottom: 10}}>
                     Nom du resto
                   </Text>
@@ -145,19 +140,19 @@ export default HomePage = () => {
             <ScrollView 
             horizontal = {true}>
             <Image
-              source={require('./assets/resto.jpg')}
+              source={require('../assets/resto.jpg')}
               style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
               name = "nom du restaurant"
             />
 
               <Image
-              source={require('./assets/resto.jpg')}
+              source={require('../assets/resto.jpg')}
               style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
               name = "nom du restaurant"
             />
 
               <Image
-              source={require('./assets/resto.jpg')}
+              source={require('../assets/resto.jpg')}
               style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
               name = "nom du restaurant"
             /> 
@@ -176,19 +171,19 @@ export default HomePage = () => {
               <ScrollView 
               horizontal = {true}>
               <Image
-                source={require('./assets/resto.jpg')}
+                source={require('../assets/resto.jpg')}
                 style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
                 name = "nom du restaurant"
               />
 
                 <Image
-                source={require('./assets/resto.jpg')}
+                source={require('../assets/resto.jpg')}
                 style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
                 name = "nom du restaurant"
               />
 
                 <Image
-                source={require('./assets/resto.jpg')}
+                source={require('../assets/resto.jpg')}
                 style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
                 name = "nom du restaurant"
               /> 
