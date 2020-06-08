@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, ImageBackground  } from 'react-native';
 
-export default function App() {
+export default function Login() {
 
   
 const [signUpFirstName, setSignUpFirstName] = useState('');
@@ -13,6 +13,8 @@ const [signInEmail, setSignInEmail] = useState('');
 const [signInPassword, setSignInPassword] = useState('');
 
 const [userExists, setUserExists] = useState(false)
+
+
 
 // var handleSubmitSignUp = async () => {
 //   const data = await fetch('sign-up',{
