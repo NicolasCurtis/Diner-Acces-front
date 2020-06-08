@@ -41,66 +41,96 @@ export default HomePage = () => {
         
          <ScrollView> 
         
-         <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
+           <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
 
               <Text style={{fontSize : 24, fontWeight  :'700', paddingHorizontal : 10, marginTop : 20}}>
                 Les plus populaires
               </Text>
 
               <View style = {{height : 130}}>
-              <ScrollView 
-              horizontal = {true}>
+
+                <ScrollView 
+                horizontal = {true}>
                 
-              <Image
-                source={require('./assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              />
+                  <Image
+                    source={require('./assets/resto.jpg')}
+                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                    name = "nom du restaurant"
+                  />
 
-                <Image
-                source={require('./assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              />
+                    <Image
+                    source={require('./assets/resto.jpg')}
+                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                    name = "nom du restaurant"
+                  />
 
-                <Image
-                source={require('./assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              /> 
+                    <Image
+                    source={require('./assets/resto.jpg')}
+                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
+                    name = "nom du restaurant"
+                  /> 
 
-</ScrollView>
-</View>    
-</View>
-            <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
+                </ScrollView>
+               </View>    
+             </View>
+
+            <View style = {{ flex :1, backgroundColor : 'white', paddingTop : 20}}>
 
               <Text style={{fontSize : 24, fontWeight  :'700', paddingHorizontal : 10, paddingBottom : 20}}>
                 Meilleurs avis
               </Text>
 
-            <View style = {{height : 130}}>
-            <ScrollView 
-              horizontal = {true}>
+            <View style = {{height : 240, flex : 1 }}>
+             
+
+                <Card
+                  
+                  image={require('./assets/resto.jpg')}>
+                  <Text style={{marginBottom: 10}}>
+                    Nom du resto
+                  </Text>
+                  <Text style={{marginBottom: 10}}>
+                   note
+                  </Text>
+                  
+
+                </Card>
                 
-              <Image
-                source={require('./assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              />
+                
+             
+                <Card
+                  
+                  image={require('./assets/resto.jpg')}>
+                  <Text style={{marginBottom: 10}}>
+                    Nom du resto
+                  </Text>
+                  
+
+                </Card>
           
-                <Image
-                source={require('./assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              />
+                
+                <Card
+                  style = {{ height : 150,  marginTop : 20, marginRight : 8}}
+                  image={require('./assets/resto.jpg')}>
+                  <Text style={{marginBottom: 10}}>
+                    Nom du resto
+                  </Text>
+                  
 
-                <Image
-                source={require('./assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              /> 
+                </Card>
 
-            </ScrollView>
+               
+                <Card
+                  style = {{ height : 150,  marginTop : 20, marginRight : 8}}
+                  image={require('./assets/resto.jpg')}>
+                  <Text style={{marginBottom: 10}}>
+                    Nom du resto
+                  </Text>
+                  
+
+                </Card>
+
+            
           </View>    
         </View>
 
@@ -182,7 +212,7 @@ const styles = StyleSheet.create({
   
   });
   
-  const cards = StyleSheet.create({
+  const cardstest = StyleSheet.create({
     container: {
       marginTop : 20,
       backgroundColor: 'white'
@@ -214,4 +244,3 @@ const styles = StyleSheet.create({
     
     
   })
-  
