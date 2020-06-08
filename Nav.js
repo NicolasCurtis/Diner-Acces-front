@@ -12,7 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 
 
-var BottomNavigator = createBottomTabNavigator({
+const BottomNavigator = createBottomTabNavigator({
   Map: mapScreens,
   Favoris: Favoris
 },
@@ -33,20 +33,20 @@ var BottomNavigator = createBottomTabNavigator({
     activeTintColor: '#eb4d4b',
     inactiveTintColor: '#FFFFFF',
     style: {
-      backgroundColor: '#1400D2',
+      backgroundColor: '#1500FF',
     }
   }
  
 
 });
 
-// var StackNavigator = createStackNavigator({ 
-//   Home: Login,
-//   BottomNavigator: BottomNavigator
-// }, 
-// {headerMode: 'none'}
-// );   
+const StackNavigator = createStackNavigator({ 
+  Home: Login,
+  BottomNavigator: BottomNavigator
+}, 
+{headerMode: 'none'}
+);   
 
-const Navigation = createAppContainer(BottomNavigator);
+const Navigation = createAppContainer(StackNavigator);
 
 export default Navigation;

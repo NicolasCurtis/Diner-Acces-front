@@ -7,7 +7,7 @@ import Navigation from './Nav';
 
 export default function App(){
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Navigation />
     </View>
   )

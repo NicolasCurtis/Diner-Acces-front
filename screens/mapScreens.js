@@ -9,7 +9,6 @@ export default function mapScreens() {
   const [currentLatitude, setCurrentLatitude] = useState(0);
   const [currentLongitude, setCurrentLongitude] = useState(0);
   const [resto, setResto] = useState([]);
-  //const [addResto, setAddResto] = useState([]);
     
   useEffect(() => {
     async function askPermissions() {
