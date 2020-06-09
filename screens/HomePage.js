@@ -9,8 +9,8 @@ export default HomePage = () => {
 
     return (
       <View style={styles.container}>
-        <View style={{width: 1000, height: 50, backgroundColor: '#00D1BD', marginTop: 30}} >
-          <Text style={{textAlign: "center", fontSize : 35, color : "white"}}>
+        <View style={{width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 30}} >
+          <Text style={{textAlign: "center", fontSize : 35, color : "FFCB44"}}>
             Diner Access
           </Text>
         </View>
