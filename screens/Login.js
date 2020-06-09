@@ -12,23 +12,38 @@ export default function Login({ navigation }) {
 
   const [signInEmail, setSignInEmail] = useState('');
   const [signInPassword, setSignInPassword] = useState('');
-  const [modalVisible, setModalVisible] = useState(false);
-
-
-
+  
+  const reg =/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/
+  
+  // const emailCheck = (email) =>{
+  //   console.log(reg.test(email))
+  // }
   var handleSubmitSignUp = async () => {
+<<<<<<< HEAD
     const data = await fetch("http://192.168.1.40:3000/sign-up", {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
     })
     const body = await data.json()
+=======
+
+      const data = await fetch("http://172.17.190.54:3000/sign-up", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
+       })
+       const body = await data.json();
+>>>>>>> new
     console.log(body)
-    if (body.result == true) {
-      navigation.navigate("Accueil")
-    }
+     if (body.result == true) {
+     navigation.navigate("Accueil")
+     }
       
-    }
+     }
+    
+    
+    
 
     var handleSubmitSignIn = async () => {
       const data = await fetch("http://192.168.1.40:3000/sign-in", {
@@ -44,9 +59,6 @@ export default function Login({ navigation }) {
         
     }
       
-  
-
-        //var myRegex = /[\w.+-]{1,64}@([a-zA-Z\d-]{2,252}\.[a-zA-Z\.]{2,6}){5,255}$
 
   return (
 
@@ -69,7 +81,7 @@ export default function Login({ navigation }) {
         placeholder="Nom"
       />
 
-      <TextInput
+      <TextInput 
         onChangeText={(e) => setSignUpEmail(e)}
         style={{ width: 250, height: 50, borderColor: 'gray', borderWidth: 1, marginBottom: 5, backgroundColor: "white", paddingLeft: 5 }}
         placeholder="Email"
@@ -124,7 +136,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00D1BD',
+    backgroundColor: '#FFBA20',
     alignItems: 'center',
     justifyContent: 'center',
   },
