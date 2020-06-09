@@ -1,15 +1,19 @@
 import React, {useState} from "react";
 import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, ScrollView} from 'react-native'
 import {Card } from 'react-native-elements';
+import { Ionicons } from '@expo/vector-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons'
+
 
 export default HomePage = () => {
 
   const [serch,setSearch] = useState('')
-  
+  var color = {color: '#f1c40f'}
 
     return (
       <View style={styles.container}>
-        <View style={{width: 1000, height: 50, backgroundColor: '#A0A0A0', marginTop: 30}} >
+        <View style={{width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 30}} >
           <Text style={{textAlign: "center", fontSize : 35, color : "#FFCB44"}}>
             Diner Access
           </Text>
@@ -34,39 +38,86 @@ export default HomePage = () => {
     
         </View>
         
-         <ScrollView> 
+         <ScrollView  >
         
-           <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
+           <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20, marginLeft : 8 , marginRight : 8}}>
 
               <Text style={{fontSize : 24, fontWeight  :'700', paddingHorizontal : 10, marginTop : 20}}>
                 Les plus populaires
               </Text>
 
-              <View style = {{height : 130}}>
+              
 
                 <ScrollView 
                 horizontal = {true}>
                 
-                  <Image
-                    source={require('../assets/resto.jpg')}
-                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                    name = "nom du restaurant"
+                <View style={{borderWidth : 1, borderColor :'#CCCCCC' }}>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150, justifyContent : "center"}}
                   />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
 
-                    <Image
-                    source={require('../assets/resto.jpg')}
-                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                    name = "nom du restaurant"
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+                   <Text></Text>
+                 </View>
+   
+               </View>
+
+               
+               <View style={{borderWidth : 1, marginLeft : 8}}>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150, justifyContent : "center"}}
                   />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
 
-                    <Image
-                    source={require('../assets/resto.jpg')}
-                    style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                    name = "nom du restaurant"
-                  /> 
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+                   <Text></Text>
+                 </View>
+   
+               </View>
 
                 </ScrollView>
-               </View>    
+                 
              </View>
 
             <View style = {{ flex :1, backgroundColor : 'white', paddingTop : 20}}>
@@ -75,58 +126,139 @@ export default HomePage = () => {
                 Meilleurs avis
               </Text>
 
-            <View style = {{height : 240, flex : 1 }}>
-             
+            
+              
+              <ScrollView
+              horizontal={true}
+              >
 
+          
+                  <View>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150,  marginTop : 20, marginLeft : 8, justifyContent : "center"}}
+                  />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
+
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+
+                 </View>
+   
+               </View>
+                 
+                 
+                <View>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150,  marginTop : 20, marginLeft : 8, justifyContent : "center"}}
+                  />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
+
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+
+                 </View>
+   
+               </View>
+
+               
+               <View>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150,  marginTop : 20, marginLeft : 8, justifyContent : "center"}}
+                  />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
+
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+
+                 </View>
+   
+               </View>
+                  
+               </ScrollView>
+                  
+
+             
+                
+                
+{/*              
                 <Card
                   
                   image={require('../assets/resto.jpg')}>
                   <Text style={{marginBottom: 10}}>
                     Nom du resto
                   </Text>
-                  <Text style={{marginBottom: 10}}>
+
+                  <Text>
+                  Text style={{marginBottom: 10}}>
                    note
                   </Text>
                   
 
-                </Card>
+                </Card> */}
                 
-                
-             
-                <Card
-                  
-                  image={require('../assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  
-
-                </Card>
-          
-                
-                <Card
-                  style = {{ height : 150,  marginTop : 20, marginRight : 8}}
-                  image={require('../assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  
-
-                </Card>
+              
 
                
-                <Card
-                  style = {{ height : 150,  marginTop : 20, marginRight : 8}}
-                  image={require('../assets/resto.jpg')}>
-                  <Text style={{marginBottom: 10}}>
-                    Nom du resto
-                  </Text>
-                  
-
-                </Card>
 
             
-          </View>    
+              
         </View>
 
         
@@ -136,62 +268,116 @@ export default HomePage = () => {
             Vous avez déjà recherché
             </Text>
 
-            <View style = {{height : 130, }}>
+            
             <ScrollView 
             horizontal = {true}>
-            <Image
-              source={require('../assets/resto.jpg')}
-              style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-              name = "nom du restaurant"
-            />
+           
+            
+           <View>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150,  marginTop : 20, marginLeft : 8, justifyContent : "center"}}
+                  />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
 
-              <Image
-              source={require('../assets/resto.jpg')}
-              style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-              name = "nom du restaurant"
-            />
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
 
-              <Image
-              source={require('../assets/resto.jpg')}
-              style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-              name = "nom du restaurant"
-            /> 
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+
+                 </View>
+   
+               </View>
+
+               
+               <View>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150,  marginTop : 20, marginLeft : 8, justifyContent : "center"}}
+                  />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
+
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+
+                 </View>
+   
+               </View>
+
+               
+               <View>
+                  
+                  <Image 
+                  source={require('../assets/resto.jpg')}
+                  style = {{width : 250, height : 150,  marginTop : 20, marginLeft : 8, justifyContent : "center"}}
+                  />
+                  <Text style={{marginBottom: 10, marginLeft : 8}}>
+                    Nom du resto
+                  </Text>
+                 
+                 <View style={{ color : "yellow"}}>
+
+                   <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
+
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+                   <FontAwesomeIcon icon={  faStar } />
+
+                   </View>
+
+                   <Text></Text>
+                    
+                   <View style={{marginLeft : 8}}>
+                      <FontAwesomeIcon icon={ faHeart }  />
+                   </View>
+
+                 </View>
+   
+               </View>
+
 
             </ScrollView>
-            </View>    
+              
         </View>     
 
-        <View style = {{ flex : 1, backgroundColor : 'white', paddingTop : 20}}>
-
-              <Text style={{fontSize : 24, fontWeight  :'700', paddingHorizontal : 10, marginBottom : 20}}>
-                Vous avez déjà recherché
-              </Text>
-
-              <View style = {{height : 130, }}>
-              <ScrollView 
-              horizontal = {true}>
-              <Image
-                source={require('../assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              />
-
-                <Image
-                source={require('../assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              />
-
-                <Image
-                source={require('../assets/resto.jpg')}
-                style = {{width : 250, height : 150,  marginTop : 20, marginRight : 8}}
-                name = "nom du restaurant"
-              /> 
-
-              </ScrollView>
-              </View>    
-              </View>     
-              <Text></Text>
+          
+              
 
         </ScrollView>
       </View>
