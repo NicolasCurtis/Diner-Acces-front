@@ -19,22 +19,12 @@ export default function Login({ navigation }) {
   //   console.log(reg.test(email))
   // }
   var handleSubmitSignUp = async () => {
-<<<<<<< HEAD
     const data = await fetch("http://192.168.1.40:3000/sign-up", {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
     })
     const body = await data.json()
-=======
-
-      const data = await fetch("http://172.17.190.54:3000/sign-up", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
-       })
-       const body = await data.json();
->>>>>>> new
     console.log(body)
      if (body.result == true) {
      navigation.navigate("Accueil")

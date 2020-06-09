@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import {View, Button, TouchableOpacity, Image,StyleSheet, Text} from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -32,21 +31,32 @@ export default reservation = (  ) => {
     
 
     <View style={styles.container}>
+
+        <View style={{width: 370, height: 50, backgroundColor: '#001F5A'}} >
+          <Text style={{textAlign: "center", fontSize : 35, color : "#FFCB44"}}>
+            Diner Access
+          </Text>
+        </View>
+
       <Card
-  title='HELLO WORLD'
-  image={require('../assets/resto.jpg')}>
-  <Text style={{marginBottom: 10}}>
-    The idea with React Native Elements is more about component structure than actual design.
-  </Text>
-  <View>
-        <Button onPress={showDatepicker} title="Choisissez une Date" />
+        title='HELLO WORLD'
+        image={require('../assets/resto.jpg')}>
+        <Text style={{marginBottom: 10}}>
+          The idea with React Native Elements is more about component structure than actual design.
+        </Text>
+
+      <View>
+         <Button onPress={showDatepicker} title="Choisissez une Date" />
       </View>
+
       <View>
       <Text></Text>
       </View>
+
       <View>
-        <Button onPress={showTimepicker} title="Choisissez une heure" />
+        <Button style={{color:"red"}} onPress={showTimepicker} title="Choisissez une heure" />
       </View>
+
       {show && (
         <DateTimePicker
           testID="dateTimePicker"
@@ -56,8 +66,11 @@ export default reservation = (  ) => {
           is24Hour={true}
           display="default"
           onChange={onChange}
+          minimumDate={Date}
         />
+
       )}
+
       
 </Card>
       
@@ -68,6 +81,7 @@ export default reservation = (  ) => {
 
 const styles = StyleSheet.create({
   container : {
+    flex : 1,
     marginTop : 25,
     backgroundColor : 'white'
   },
