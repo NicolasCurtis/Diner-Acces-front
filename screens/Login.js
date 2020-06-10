@@ -22,7 +22,7 @@ export default function Login({ navigation }) {
    if(emailCheck == false ){
      console.log("erreur")
    } else {
-    const data = await fetch("http://172.17.190.54:3000/sign-up", {
+    const data = await fetch("http://192.168.1.40:3000/sign-up", {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
@@ -41,7 +41,7 @@ export default function Login({ navigation }) {
     
 
     var handleSubmitSignIn = async () => {
-      const data = await fetch("http://172.17.190.54:3000/sign-in", {
+      const data = await fetch("http://192.168.1.40:3000/sign-in", {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `emailFromFront=${signInEmail}&passwordFromFront=${signInPassword}`
