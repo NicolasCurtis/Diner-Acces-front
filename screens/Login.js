@@ -13,24 +13,29 @@ export default function Login({ navigation }) {
   const [signInEmail, setSignInEmail] = useState('');
   const [signInPassword, setSignInPassword] = useState('');
   
-  const reg =/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/
+  var regex = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
   
-  // const emailCheck = (email) =>{
-  //   console.log(reg.test(email))
-  // }
-  var handleSubmitSignUp = async () => {
+    const emailCheck = (email) =>{
+     console.log(regex.test(email))
+   }
+ var handleSubmitSignUp = async () => {
+   if(emailCheck == false ){
+     console.log("erreur")
+   } else {
     const data = await fetch("http://172.17.190.54:3000/sign-up", {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `firstnameFromFront=${signUpFirstName}&lastnameFromFront=${signUpLastName}&emailFromFront=${signUpEmail}&passwordFromFront=${signUpPassword}`
     })
-    const body = await data.json()
-    console.log(body)
-     if (body.result == true) {
-     navigation.navigate("Accueil")
+      const body = await data.json()
+      console.log(body)
+      if (body.result == true) {
+      navigation.navigate("Accueil")
      }
+   }
+   
       
-     }
+    }
     
     
     
@@ -54,7 +59,7 @@ export default function Login({ navigation }) {
 
 
     <View style={styles.container}>
-      <Text style={{ fontSize: 55, fontStyle: "italic", color: "#FFCB44" }}>Diner Access </Text>
+      <Text style={{ fontSize: 55, fontStyle: "italic", color: "#FFCB44" }}> Diner Access </Text>
       <Text></Text>
       <Text></Text>
 
@@ -87,7 +92,7 @@ export default function Login({ navigation }) {
       <Text></Text>
 
       <Button
-        onPress={() => handleSubmitSignUp()}
+        onPress={() => handleSubmitSignUp(signUpEmail)}
         title="Inscription"
         color="#FFCB44"
 
