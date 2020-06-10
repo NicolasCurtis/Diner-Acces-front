@@ -10,11 +10,19 @@ export default HomePage = () => {
 
   var color = { color: '#f1c40f' }
 
+<<<<<<< HEAD
   return (
     <View style={styles.container}>
       <View style={{ width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 30 }} >
         <Text style={{ textAlign: "center", fontSize: 35, color: "#FFCB44" }}>
           Diner Access
+=======
+    return (
+      <View style={styles.container}>
+        <View style={{width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 30}} >
+          <Text style={{textAlign: "center", fontSize : 35, color : "#FFCB44"}}>
+            Diner Access
+>>>>>>> 6cb44daeba2e9453c4cc9e56bba8a6978dfb882a
           </Text>
       </View>
       <View style={{ flexDirection: "row", marginTop: 35, paddingRight: 100 }}>
