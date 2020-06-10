@@ -3,14 +3,39 @@ import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, Scr
 import {Card } from 'react-native-elements';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 export default HomePage = () => {
 
+  var restoData = [
+    {name :"Le comptoir Duquesne", desc : "Restaurant proche tête d'or", img : "../assets/resto.jpg", note : 6.5, vote : 5 },
+    {name :"L'assiette du Parc", desc : "Restaurant proche tête d'or", img : "../assets/resto.jpg", note : 6.5, vote : 5 },
+    {name :"Le passe-temps", desc : "Restaurant proche tête d'or", img : "../assets/resto.jpg", note : 6.5, vote : 5 },
+    {name :"Le Tout en canon", desc : "Restaurant proche tête d'or", img : "../assets/resto.jpg", note : 6.5, vote : 5 }
+
+  ]
+
+
+
   const [serch,setSearch] = useState('')
+  const [likeResto, setLikeResto] = useState(false)
+
   var color = {color: '#f1c40f'}
 
+  var handleClickAddResto = () => {
+
+  }
+
+  if(likeResto) {
+    var colorLike = {color : '#e74c3c'}
+  } else {
+    var colorLike = {}
+  }
+
+    
     return (
       <View style={styles.container}>
         <View style={{width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 30}} >
@@ -54,17 +79,23 @@ export default HomePage = () => {
                 <View style={{borderWidth : 1, borderColor :'#CCCCCC' }}>
                   
                   <Image 
-                  source={require('../assets/resto.jpg')}
+                  source={restoData.img}
                   style = {{width : 250, height : 150, justifyContent : "center"}}
                   />
-                  <Text style={{marginBottom: 10, marginLeft : 8}}>
-                    Nom du resto
+                  <Text style={{marginBottom: 10, marginLeft : 8, textAlign: "center"}}>
+                    {restoData.name}
                   </Text>
                  
                  <View style={{ color : "yellow"}}>
 
                    <View style={{flexDirection : "row", color : {color}, marginLeft : 8}}>
-
+                     <Text>
+                       {restoData.desc}
+                     </Text>
+                     <Text>
+                       Note
+                     </Text>
+                     <Text></Text>
                    <FontAwesomeIcon icon={  faStar } />
                    <FontAwesomeIcon icon={  faStar } />
                    <FontAwesomeIcon icon={  faStar } />
@@ -75,8 +106,12 @@ export default HomePage = () => {
 
                    <Text></Text>
                     
-                   <View style={{marginLeft : 8}}>
-                      <FontAwesomeIcon icon={ faHeart }  />
+                   <View style={{marginLeft : 8,flexDirection : "row"}}>
+                   <Text>
+                       Favoris 
+                     </Text>
+                     <Text></Text>
+                      <FontAwesomeIcon icon={ faHeart } style = {colorLike} onPress={() => setLikeResto(! likeResto)} />
                    </View>
                    <Text></Text>
                  </View>
