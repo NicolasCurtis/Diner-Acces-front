@@ -66,7 +66,8 @@ export default reservation = (  ) => {
           is24Hour={true}
           display="default"
           onChange={onChange}
-          minimumDate={Date}
+          date={new Date()}
+          minimumDate={new Date()}
         />
 
       )}

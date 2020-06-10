@@ -27,6 +27,10 @@ export default reservation = (  ) => {
     showMode('time');
   };
 
+  const affichage = (date) => {
+    setDate(currentDate)
+  }
+
   return (
 
     
@@ -67,14 +71,18 @@ export default reservation = (  ) => {
           is24Hour={true}
           display="default"
           onChange={onChange}
-          minimumDate={Date}
+          minimumDate={new Date()}
         />
 
       )}
 
       
 </Card>
-      
+      <View>
+        <Text>
+          {affichage}
+        </Text>
+      </View>
       
     </View>
   );
