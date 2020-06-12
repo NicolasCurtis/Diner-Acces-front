@@ -33,8 +33,6 @@ export default reservation = (  ) => {
 
   return (
 
-    
-
     <View style={styles.container}>
 
         <View style={{width: 370, height: 50, backgroundColor: '#001F5A'}} >
@@ -44,45 +42,15 @@ export default reservation = (  ) => {
         </View>
 
       <Card
-        title='HELLO WORLD'
-        image={require('../assets/resto.jpg')}>
+        title='Le comptoir Duquesne'
+        image={require('../assets/dudu.jpg')}>
         <Text style={{marginBottom: 10}}>
-          The idea with React Native Elements is more about component structure than actual design.
+         Restaurant atypique situé dans le sixième arrondissement de lyon ....
         </Text>
-
-      <View>
-         <Button onPress={showDatepicker} title="Choisissez une Date" />
-      </View>
-
-      <View>
-      <Text></Text>
-      </View>
-
-      <View>
-        <Button style={{color:"red"}} onPress={showTimepicker} title="Choisissez une heure" />
-      </View>
-
-      {show && (
-        <DateTimePicker
-          testID="dateTimePicker"
-          timeZoneOffsetInMinutes={0}
-          value={date}
-          mode={mode}
-          is24Hour={true}
-          display="default"
-          onChange={onChange}
-          minimumDate={new Date()}
-        />
-
-      )}
 
       
 </Card>
-      <View>
-        <Text>
-          {affichage}
-        </Text>
-      </View>
+    
       
     </View>
   );

@@ -6,7 +6,7 @@
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/tanuki_cafe_comptoir.jpg",
       "adresse": "70 rue Ney 69006 Lyon",
       "desc": "J'ai retrouvé le chef Grégory Biechel, auparavant à la Brunoise à Villeurbanne , derrière le comptoir de son nouveau restaurant Tanuki. Nouvelle aventure depuis mai 2018 qui lui permet de réunir en un seul concept ses deux passions pour le vin français et la cuisine japonaise. Son épouse japonaise, arrivée d'Osaka pour enseigner la tradition culinaire de son pays, oeuvre désormais en cuisine . Un mariage réussi au propre comme au figuré",
-      "type": "Tapas japonaises et plats traditionnels",
+      "type": "Japonais",
       "menu": [
         {"plat":"Edamame (fèves de soja)", "prix":"3,50 euros"},
         {"plat":"Kimchi coréen (chou mariné pimenté)", "prix": "4,50 euros"},
@@ -15,14 +15,15 @@
         {"plat":"Aubergines aigre-douce", "prix": "4 euros"}
        ],
       "site_url": "http://www.tanuki-cafecomptoir.fr/",
-      "horaires": {"Midi" : "09h00-15h00", "Soir": "17h30-23h00"}
+      "horaires": "Midi : 09h00-15h00, Soir: 17h30-23h00"
      },
      {
       "nom": "Le Théodore Lyon 6",
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/le_theodore_lyon_6.jpg",
-      "adresse": "34, cours Franklin Roosevelt 69006 Lyon 04 78 24 08 52",
+      "tel" : "04 78 24 08 52",
+      "adresse": "34, cours Franklin Roosevelt 69006 Lyon",
       "desc": "Le restaurant le Théodore est l'adresse chic du cours Franklin Roosevelt dans le 6ème à Lyon. Marco Chopin, patron emblématique de cette belle maison, excelle pour accueillir chacun de ses clients dans une ambiance cosy autour d'une cuisine de qualité.",
-      "type": "Menus déjeuner",
+      "type": "Bistrot",
       "menu": "Dessert du jour ou salade de fruits",
       "site": "Site internet",
       "site_url": "http://www.letheodore.fr/",
@@ -34,7 +35,7 @@
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/chateau_de_saint-priest.jpg",
       "adresse": "2 Rue de l'Égalité 69800 Saint-Priest 04 87 65 06 02",
       "desc": "Au coeur de la région Rhône-Alpes et à quelques minutes de la capitale de la gastronomie mondiale, sortez de l’agitation de la vie lyonnaise le temps d’un instant ... Découvrez un endroit d’exception où se mêlent histoire, art contemporain, prestige et magie ... Pour y passer une soirée en week-end, pour y partager un déjeuner en semaine, ou même pour organiser vos événements, passez dans cet endroit un moment hors du temps !",
-      "type": "Menu enfant",
+      "type": "Gastronomie",
       "menu": "Menu enfant (plat + dessert) Suprême de poulet rôti, purée de pommes de terre\nOu\nFilet de poisson (selon arrivage)\n+\nMoelleux chocolat, glace vanille",
       "site": "Site internet",
       "site_url": "http://www.chateau-de-saint-priest.com/",
@@ -43,7 +44,8 @@
      {
       "nom": "Au Grand Large",
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/au_grand_large.jpg",
-      "adresse": "60 rue Francisco Ferrer 69150 Decines-Charpieu 04 78 49 11 19",
+      "tel" : "04 78 49 11 19",
+      "adresse": "60 rue Francisco Ferrer 69150 Decines-Charpieu",
       "desc": "On s’étonne d’arriver si vite au Grand Large, si proche de la cité, si proche de la nature. Ici le temps s’est arrêté, la vue ne donne que sur l’espace sauvage et protégé du plan d’eau du Grand Large, à 200 mètres de la station de tramway ! C’est ici que la famille Gharbi accueille tant le monde des affaires que les familles en promenade.",
       "type": "Menu des gones",
       "menu": "Steak haché bio avec ses frites Ou Pizza marguerite",
@@ -56,7 +58,7 @@
       "tel": "04 72 10 44 44",
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/brasserie_lyon_plage.jpg",
       "adresse": "Hôtel Lyon Métropole - 84 quai Joseph Gillet 69004 Lyon 04 72 10 44 44",
-      "type": "Forfait lunch et spa",
+      "type": "Brasserie",
       "menu": "Du lundi au vendredi, hors jours fériés, profitez d'une vraie journée de détente à 115 € / pers. :",
       "site": "Site internet",
       "site_url": "http://www.lyonmetropole.com/fr/brasserie-bar.html",
@@ -65,100 +67,26 @@
      {
       "nom": "Chez Carlo",
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/chez_carlo.jpg",
-      "adresse": "22, rue Palais Grillet 69002 Lyon 04 78 42 05 79",
+      "tel" : "04 78 42 05 79",
+      "adresse": "22, rue Palais Grillet 69002 Lyon",
       "desc": "Amateur des établissements historiques, le nom de Chez Carlo vous est forcément familier. Ce restaurant au coeur de la Presqu’ile, entre la Place Bellecour et les Cordeliers, qui saura encore vous surprendre avec des pizzas traditionnelles cuites au feu de bois et une savoureuse cuisine maison italienne. On aime l’esprit trattoria avec un léger coté vintage à l’intérieur , le four à bois visible du restaurant derrière une belle verrière et la terrasse au calme, un must en centre ville.",
-      "type": "La carte",
+      "type": "Bouchon lyonnais",
       "menu": "L'île flottante aux pralines - 6,50 euros Mousse au chocolat Weiss - 6,50 euros Entremet al cappuccino - 6,50 euros\nSalade de fruits frais - 6,50 euros\nPanna cotta au coulis de fruits rouges - 6,50 euros\nCitron givré - 6,50 euros\nTarte au citron - 6,50 euros\nMoelleux au chocolat Weiss - 7 euros\nTiramisu au café - 7 euros\nCannoli - 7 euros\nLe baba au limoncello - 7 euros\nCafé ou Thé gourmand - 7,50 euros\nCoupe de glace artisanale (Histoire de glace) 1 /2 / 3 boules : 3,00 /4,50 / 6,50 euros\nSorbets : 3 agrumes, poire Williams de Savoie, fraise Mara des bois, pêche de vigne des coteaux du lyonnais\nGlaces : vanille Bourbon de Madagascar, chocolat noir de Tanzanie, caramel beurre fleur de sel de Camargue, pistache de Sicile",
       "horaires": "Midi : 12h00-14h00 Soir : 19h00-22h30 Ouvert jusqu'à 23h les vendredis et samedis soirs"
      },
      {
       "nom": "Brasserie des Monts d'Or",
       "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/brasserie_des_monts_d_or.jpg",
-      "adresse": "3, Place de la République 69450 Saint-Cyr-au-Mont-d'Or 04 78 47 20 14",
+      "tel" : "04 78 47 20 14",
+      "adresse": "3, Place de la République 69450 Saint-Cyr-au-Mont-d'Or",
       "desc": "Avec une vue exceptionnelle depuis la place du village de Saint-Cyr au Mont d'Or, la Brasserie des Monts d'Or offre une table de qualité avec sa réouverture orchestrée par David Pouly et le chef Michaël Gaudinet",
-      "type": "Carte de la brasserie des monts d'or",
+      "type": "Brasserie",
       "menu": "Paris-Brest - 9€ Tartelette fraises, verveine - 9€ Café gourmand - 8€",
       "site": "Site internet",
       "site_url": "http://www.brasseriedesmontsdor.fr/",
       "horaires": "Midi : 12h00-14h00 Soir : 19h00-22h30"
-     },
-     {
-      "nom": "Le Place Neuve",
-      "tel": "04 72 54 55 24",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/le_place_neuve.jpg",
-      "adresse": "35, Place Neuve 69690 Brullioles 04 72 54 55 24",
-      "desc": "Après avoir travaillé dans de grandes maisons telles que Paul Bocuse, Nicolas Le Bec, la Rotonde ou encore la Villa Florentine, Edith et Emmanuel Janody ont finalement ouvert leur propre restaurant dans les Monts du Lyonnais, à seulement quelques minutes de Lyon. Au coeur du petit village champêtre de Brullioles, l’Hôtel-Restaurant le Place Neuve offre une véritable parenthèse de douceur dans notre quotidien.",
-      "type": "Menu \"jeunes pousses\"",
-      "menu": "11 euros par personne jusqu à 12 ans un jus de fruit, un plat et un dessert",
-      "site": "Site internet",
-      "site_url": "http://www.leplaceneuve.fr/",
-      "horaires": "Midi : 12h00-14h00 Soir : 19h30-21h30"
-     },
-     {
-      "nom": "Aux trois Maries",
-      "tel": "04 78 37 67 28",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/aux_trois_maries.jpg",
-      "adresse": "1, rue des trois Maries 69005 Lyon 04 78 37 67 28",
-      "desc": "Autrefois appelé le « Café des primeurs » en référence au marché situé sur le Quai de Saône, Aux trois Maries est l’un des plus anciens bouchons lyonnais. Plus qu’un restaurant, ce bouchon né au milieu du siècle dernier est avant tout un lieu rempli d’âme et d’histoire, qui a parcouru le temps.",
-      "type": "Menu trois maries",
-      "menu": "Fromage \"La Mère Richard\"\nOu\nDessert maison au choix à la carte",
-      "site": "Site internet",
-      "site_url": "http://aux-3-maries.fr/",
-      "horaires": "Midi : 12h00-14h00 Soir : 19h00-22h00 Service jusque 22h30 vendredi et samedi ouvert dimanche midi et soir"
-     },
-     {
-      "nom": "Brasserie La Rotonde",
-      "tel": "04 74 72 45 44",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/brasserie_la_rotonde.jpg",
-      "adresse": "8 place Pierre Vauboin 69160 Tassin la Demi Lune 04 74 72 45 44",
-      "desc": "La Rotonde est un restaurant bar mais surtout une véritable institution de Tassin la Demi-Lune au pied de sa fameuse horloge. Ouverte 7j/7, l'adresse est ouverte toute la journée, offre un restaurant de qualité avec une équipe motivée qui cultive la bienveillance et le service envers ses clients",
-      "type": "La carte",
-      "menu": "Crème brulée à la vanille : 5,90 euros Ile flottante aux pralines roses : 5,90 euros\nFondant au chocolat au pralin amendes et noisettes : 5,90 euros\nVacherin glacé, mangue, fraise, citron, coulis de fruits rouges, chantilly : 5,90 euros\nTarte fruits de la passion : 5,90 euros\nCafé gourmand : 6,50 euros\nThé gourmand : 7,50 euros\nDame Blanche : 5,90 euros\nvanille, chocolat, chantilly\nCafé Liégeois : 5,90 euros\nvanille, café, chantilly\nChocolat Liégeois : 5,90 euros\nvanille, chocolat, chantilly\nCoupe Colonel : 5,90 euros\ncitron vert, vodka\nCoupe Frozen Yaourt : 5,90 euros\nglace yaourt Bulgare artisanale, coulis de fruits rouges, chantilly\nCoupe Iceberg : 5,90 euros\nglace menthe chocolat, get 27\nCoupe Bloody Shake : 5,90 euros\nsorbet framboise, fraise, glace barbapapa, coulis exotique",
-      "site": "Site internet",
-      "site_url": "http://www.brasserie-larotonde.fr/",
-      "horaires": "Midi : 06h00-23h00 Soir : 06h00-23h00 Ouvert 7/7 de 7h à minuit service continu samedi et dimanche"
-     },
-     {
-      "nom": "Gourmet Bar Confluence",
-      "tel": "04 37 23 64 14",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/gourmet_bar_confluence.jpg",
-      "adresse": "Novotel Confluence (3, rue Montrochet) 69002 Lyon 04 37 23 64 14",
-      "desc": "La vue époustouflante à 180 degrés offre un lieu splendide au quartier de la Confluence. En terrasse ou derrière les immenses baies vitrées, le point de vue est unique à Lyon. Spécialités de cuisine du monde, influences asiatiques, italiennes, sud américaines ou françaises savent réveiller les papilles. Une jeune équipe professionnelle",
-      "site": "Facebook",
-      "site_url": "https://https//www.facebook.com/gourmetbarlyonconfluence/",
-      "horaires": "Midi : 12h00-14h30 Soir : 19h00-22h30"
-     },
-     {
-      "nom": "Chez Carlo Gerland",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/chez_carlo_gerland.jpg",
-      "adresse": "241, rue Marcel Mérieux 69007 Lyon 04 78 72 62 48",
-      "desc": "Les lyonnais connaissent la pizzéria Chez Carlo, car elle est la plus ancienne de la ville. La belle dame s'est trouvée une nouvelle adresse institutionnelle, en lieu et place de l'ancien restaurant Gamboni dans le quartier de Gerland. Jolie surprise un four à bois tournant trône en son centre, marquant le souhait de Maxime Pignard l'heureux propriétaire , de marquer la qualité jusqu'en salle.",
-      "type": "La carte",
-      "menu": "L'île flottante aux pralines - 6,50 euros Mousse au chocolat Weiss - 6,50 euros\nEntremet al cappuccino - 6,50 euros\nSalade de fruits frais - 6,50 euros\nPanna cotta au coulis de fruits rouges - 6,50 euros\nCitron givré - 6,50 euros\nTarte au citron - 6,50 euros\nMoelleux au chocolat Weiss - 7 euros\nTiramisu au café - 7 euros\nCannoli - 7 euros\nLe baba au limoncello - 7 euros\nCafé ou Thé gourmand - 7,50 euros\nCoupe de glace artisanale (Histoire de glace) 1 /2 / 3 boules : 3,00 /4,50 / 6,50 euros\nSorbets : 3 agrumes, poire Williams de Savoie, fraise Mara des bois, pêche de vigne des coteaux du lyonnais\nGlaces : vanille Bourbon de Madagascar, chocolat noir de Tanzanie, caramel beurre fleur de sel de Camargue, pistache de Sicile",
-      "site": "Site internet",
-      "site_url": "http://chezcarlo-lyon.fr/",
-      "horaires": "Midi : 12h00-14h00 Soir : 19h00-22h30"
-     },
-     {
-      "nom": "Daddy Poule",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/daddy_poule.jpg",
-      "adresse": "173 avenue Charles de Gaulle 69160 Tassin la Demi-Lune 04 74 70 07 07",
-      "desc": "Daddy Poule c’est l’adresse atypique de Tassin-la-Demi-Lune. Un concept pensé par le chef Philippe Gauvreau, qui offre à ses clients un lieu unique sur les toits de la ville où on peut déguster une cuisine fraiche et savoureuse tout en étant élégante. Entre simplicité et convivialité, découvrez ce restaurant unique en son genre.",
-      "type": "Parking en sous-sol",
-      "menu": "-Vacherin glacé aux fruits rouges, Glace yaourt au lait des Montagnes de Savoie\n8.20€\n- Baba au rhum ambré,\nAnanas caramélisé, crème chantilly, amandes\n8.00€\n- Fondant chocolat mi-cuit,\nGlace caramel au beurre AOP D'Isigny\n8.20€\n- Crémeux citron passion aux fruits frais\n7.80€\n- Fraises de notre région de \"Papy Michel\",\nFaçon Melba\n8.00€\n- Salade de fruits frais à la menthe,\nMadeleine au miel\n7.80€\n- Coupe glacée façon \"Mojito\",\nSorbet rhum Dom Papa, citron vert, menthe verte, sirop au rhum citron vert\n8.80€",
-      "site": "Site internet",
-      "site_url": "http://www.daddypoule.com/",
-      "horaires": "Midi : 10h00-14h00 Soir : 14h00-01h00"
-     },
-     {
-      "nom": "Casabea",
-      "img": "https://www.lyonresto.com/contenu/logo_fiche/150x150/casabea.jpg",
-      "adresse": "5 rue de la Monnaie (angle rue Mercière et rue Thomassin) 69002 Lyon 04 78 37 90 80",
-      "desc": "Après plusieurs années à la tête du restaurant italien Fuxia, Grégoire et Béatrice Talamon ont amorcé un changement de cap en donnant une nouvelle identité à ce lieu situé en plein coeur de la presqu’île de Lyon, à quelques pas de la rue Mercière. Depuis le 21 janvier 2019, le Fuxia laisse ainsi sa place à la CASABEA, bar-restaurant chaleureux et verdoyant où il fait bon de se retrouver tout au long de la journée.",
-      "site": "Site internet",
-      "site_url": "http://www.casabea.fr/",
-      "horaires": "Midi : 12h - 14h30 Soir : 18h - 22H Service continu le samedi de 12h à 22h"
      }
+  
     ]
    }
    
