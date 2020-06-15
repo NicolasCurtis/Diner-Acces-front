@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, StatusBar, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, StatusBar, ImageBackground, Alert } from 'react-native';
 
 export default function Login({ navigation }) {
 
@@ -14,12 +14,22 @@ export default function Login({ navigation }) {
   
   var regex = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
   
-    const emailCheck = (email) =>{
-     console.log(regex.test(email))
-   }
- var handleSubmitSignUp = async () => {
+  var handleSubmitSignUp = async (email) => {
+
+    const emailCheck = regex.test(email);
+
    if(emailCheck == false ){
      console.log("erreur")
+     Alert.alert(
+      'Email invalide',
+      'veuillez entrer un Email valide :)',
+      [
+        
+       
+        { text: 'OK', onPress: () => console.log('OK Pressed') }
+      ],
+      { cancelable: false }
+    );
    } else {
     const data = await fetch("http://172.17.190.54:3000/sign-up", {
       method: 'POST',
@@ -49,6 +59,17 @@ export default function Login({ navigation }) {
       console.log(body)
       if (body.result == true) {
         navigation.navigate("Accueil")
+      }else{
+        Alert.alert(
+          'Email ou mot de passe invalide',
+          'veuillez entrer un Email ou un mot de passe valide :)',
+          [
+            
+           
+            { text: 'OK', onPress: () => console.log('OK Pressed') }
+          ],
+          { cancelable: false }
+        );
       }
         
     }

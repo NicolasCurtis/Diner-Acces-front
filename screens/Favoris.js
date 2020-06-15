@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, Scr
 import dataResto from '../dataResto.json';
 import restoTriche from '../restoTriche.json';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faStar, faHeart, faPhone, faMobileAlt, faTrash, faUtensils } from '@fortawesome/free-solid-svg-icons'
+import {faMobileAlt, faTrash, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import ImageModal from 'react-native-image-modal';
 
 import {connect} from 'react-redux';
@@ -12,15 +12,9 @@ import {connect} from 'react-redux';
 
 
 Favoris = (props) => {
-
-const [search, setSearch] = useState('');
-const [restoList, setRestoList] = useState([]);
 const [showModal, setShowModal] = useState(false);
 const [restoModal, setRestoModal] = useState('');
-const [likeResto, setLikeResto] = useState(false);
-const [restoLiked, setRestoLiked] = useState('')
 
-var color = { color: '#f1c40f' }
 
 var handleClick = (restoEnQuestion) => {
    setShowModal(true)
@@ -28,11 +22,6 @@ var handleClick = (restoEnQuestion) => {
    setRestoModal(restoEnQuestion)
 }
 
-if (likeResto) {
-var colorLike = {color : "red"}
-}else {
- var colorLike = {}
-}
 
 var NoRestaurant
 if(props.myRestos == 0){
@@ -52,7 +41,7 @@ if(props.myRestos == 0){
 
                      
                       <ScrollView>
-                        <View style={{backgroundColor : '#FFE7DA',  padding : 25, borderRadius : 10, flex : 1, margin : 20}}>
+                        <View style={{backgroundColor : '#f1f2f6',  padding : 25, borderRadius : 10, flex : 1, margin : 20}}>
 
                          
                            <View style={{justifyContent : "center"}}>
@@ -75,12 +64,7 @@ if(props.myRestos == 0){
                           <Text style={{marginBottom : 10,  fontSize : 15}}>
                             Spécialités : {restoModal.type}
                           </Text>
-
-                          {/* <Text style={{marginBottom : 10, fontSize : 15}}>
-                            Adresse : {restoModal.menu}
-                          </Text> */}
           
-
                           <Text style={{marginBottom : 10,  fontSize : 15, fontStyle : "italic"}}>
                             {restoModal.desc}
                           </Text>
@@ -138,11 +122,11 @@ if(props.myRestos == 0){
             {
               props.myRestos.map((resto, i) => {
                 return (
-                  <View style={{ borderWidth: 1, borderColor: '#CCCCCC' ,  marginBottom : 10, backgroundColor : "#FFF6F1"}}>
+                  <View style={{ borderWidth: 1, borderColor: '#CCCCCC' ,  marginBottom : 10, backgroundColor : "#FFFFFF", borderRadius : 5}}>
 
                     <Image
                       source={{uri: resto.img}}
-                      style={{ width: 250, height: 150, justifyContent: "center" }}
+                      style={{ width: 250, height: 150, justifyContent: "center", borderRadius : 5 }}
                       
                     />
 
@@ -158,7 +142,7 @@ if(props.myRestos == 0){
                         <FontAwesomeIcon icon={faTrash} type='delete' onPress={() => {props.deleteToFavoris(i) }}/>
                       </View>
 
-                      <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(resto)} />
+                      <Button title=' En savoir plus' color="#EBA41B"  onPress={() => handleClick(resto)} />
 
                    
                   </View>
@@ -192,7 +176,7 @@ function mapDispatchToProps(dispatch) {
     deleteToFavoris: function(restoDeleted) {
       
       dispatch({type : 'deleteResto',
-    unLike : restoDeleted})
+      unLike : restoDeleted})
     }
   }
 }

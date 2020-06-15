@@ -12,7 +12,7 @@ import { StyleSheet,
   Alert
 } from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {  faHeart, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
+import {  faHeart, faMobileAlt, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import ImageModal from 'react-native-image-modal';
 
 import {connect} from 'react-redux';
@@ -29,14 +29,12 @@ HomePage = (props) => {
   const [restoModal, setRestoModal] = useState('');
   const [likeResto, setLikeResto] = useState(false);
 
-  var color = { color: '#f1c40f' }
-
   var handleClick = (restoEnQuestion) => {
      setShowModal(true)
      console.log(restoEnQuestion)
      setRestoModal(restoEnQuestion)
+     setLikeResto(false)
   }
-
 
 
  if (likeResto) {
@@ -112,16 +110,10 @@ HomePage = (props) => {
                              }>
                             
                                <View style={{flexDirection : "row", alignItems : "center" }}>
-
                                   <Text style={{marginBottom : 10, fontSize : 18,marginRight : 10, marginLeft : 40, marginTop : 10, color : 'red'}}>
-
                                   Cliquez ici pour reserver 
-
-                                  </Text>  
-                            
-
+                                  </Text>
                                   <FontAwesomeIcon icon={faMobileAlt} style={{height : 10, width : 10}}/>
-
                                </View>
 
                           </TouchableOpacity>
@@ -141,7 +133,7 @@ HomePage = (props) => {
       <ScrollView  >
         <View style={{ flex: 1, backgroundColor: '#FFFFFF', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
           <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 10, marginTop: 20, marginBottom: 20 }}>
-            Les plus populaires
+            Les plus populaires <FontAwesomeIcon icon={faUtensils}/>
               </Text>
 
              
@@ -168,7 +160,7 @@ HomePage = (props) => {
                     <View >
 
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faHeart}  onPress={() => {props.addToFavoris(resto); setLikeResto(!likeResto) }}/>
+                        <FontAwesomeIcon icon={faHeart}  onPress={() => {props.addToFavoris(resto); setLikeResto(!likeResto);  }}/>
                       </View>
                       <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(resto)} />
                       
@@ -184,7 +176,7 @@ HomePage = (props) => {
 
         <View style={{ flex: 1, backgroundColor: '#FFFFFF', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
           <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 10, marginTop: 20, marginBottom: 20 }}>
-            Les mieux Notés
+            Les mieux Notés <FontAwesomeIcon icon={faUtensils}/>
               </Text>
 
              
@@ -209,12 +201,10 @@ HomePage = (props) => {
                     </Text>
 
                     <View >
-
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
                         <FontAwesomeIcon icon={faHeart}  onPress={() =>{props.addToFavoris(restaurant);setLikeResto(!likeResto) }} />
-
-
                       </View>
+
                       <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(restaurant)} />
                       
                     </View>
@@ -230,41 +220,13 @@ HomePage = (props) => {
     </ImageBackground>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    //backgroundColor: "white"
   },
 });
-const cardstest = StyleSheet.create({
-  container: {
-    marginTop: 20,
-    backgroundColor: 'white'
-  },
-  card: {
-    backgroundColor: '#FFF',
-    marginBottom: 10,
-    marginLeft: '2%',
-    width: '96%',
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
-    shadowRadius: 1,
-    shadowOffset: {
-      width: 3,
-      height: 3
-    }
-  },
-  cardTmage: {
-    width: '100%',
-    height: 200,
-    resizeMode: 'cover'
-  },
-  cardText: {
-    padding: 10,
-    fontSize: 16
-  }
-})
 
 function mapDispatchToProps(dispatch) {
     return {
