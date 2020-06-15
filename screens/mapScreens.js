@@ -23,9 +23,12 @@ export default function mapScreens() {
       }
     };
     async function restolist(){
-      var food = await fetch("http://192.168.1.40:3000/restolist")
+      var food = await fetch("http://172.17.190.54:3000/restolist")
       .then(res => res.json())
-      .then(data => setResto(data.restaurant))
+      .then(data => {;
+        console.log(data.restaurant)
+        setResto(data.restaurant)
+      })
       .catch(error => console.log(error))
       // var jsonResponse = await food.json()
       //console.log(jsonResponse)
