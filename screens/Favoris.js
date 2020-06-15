@@ -35,12 +35,6 @@ export default reservation = (  ) => {
 
     <View style={styles.container}>
 
-        <View style={{width: 370, height: 50, backgroundColor: '#001F5A'}} >
-          <Text style={{textAlign: "center", fontSize : 35, color : "#FFCB44"}}>
-            Diner Access
-          </Text>
-        </View>
-
       <Card
         title='Le comptoir Duquesne'
         image={require('../assets/dudu.jpg')}>
