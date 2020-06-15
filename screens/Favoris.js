@@ -39,7 +39,7 @@ var colorLike = {color : "red"}
   return(
 
     <View style={styles.container}>
-      <View style={{ width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 30 }} >
+      <View style={{ width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 20 }} >
         <Text style={{ textAlign: "center", fontSize: 35, color: "#FFCB44" }}>
           Diner Access
           </Text>
@@ -118,7 +118,7 @@ var colorLike = {color : "red"}
                           </TouchableOpacity>
 
                           <View style={{justifyContent : "flex-end", flex : 1}}>
-                            <Button  color = "#001F5A" title='Fermer' onPress={() => setShowModal(!showModal)} />
+                            <Button  color = "#EBA41B" title='Fermer' onPress={() => setShowModal(!showModal)} />
                           </View>
 
                         </View>
@@ -129,14 +129,14 @@ var colorLike = {color : "red"}
 
       <ScrollView >
 
-      <View style={{ flex: 1, backgroundColor: '#FFF6F1', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
+      <View style={{ flex: 1, paddingTop: 10 }}>
         
 
           
             {
               props.myRestos.map((resto, i) => {
                 return (
-                  <View style={{ borderWidth: 1, borderColor: '#CCCCCC' , marginLeft: 5, marginBottom : 10}}>
+                  <View style={{ borderWidth: 1, borderColor: '#CCCCCC' ,  marginBottom : 10, backgroundColor : "#FFF6F1"}}>
 
                     <Image
                       source={{uri: resto.img}}

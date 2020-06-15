@@ -117,7 +117,7 @@ HomePage = (props) => {
                           </TouchableOpacity>
 
                           <View style={{justifyContent : "flex-end", flex : 1}}>
-                            <Button  color = "#001F5A" title='Fermer' onPress={() => setShowModal(!showModal)} />
+                            <Button  color = "#EBA41B" title='Fermer' onPress={() => setShowModal(!showModal)} />
                           </View>
 
                         </View>
@@ -129,7 +129,7 @@ HomePage = (props) => {
                    
 
       <ScrollView  >
-        <View style={{ flex: 1, backgroundColor: '#ecf0f1', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
+        <View style={{ flex: 1, backgroundColor: '#FFFFFF', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
           <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 10, marginTop: 20, marginBottom: 20 }}>
             Les plus populaires
               </Text>
@@ -140,11 +140,11 @@ HomePage = (props) => {
             {
               dataResto.restos.map((resto, i) => {
                 return (
-                  <View style={{ borderWidth: 1, borderColor: '#CCCCCC' , marginLeft: 5, marginBottom : 10}}>
+                  <View style={{ borderWidth: 0.2, borderColor: '#8E8E8E' , marginLeft: 5, marginBottom : 10, borderRadius : 10, backgroundColor : "#FFFFFF"}}>
 
                     <Image
                       source={{uri: resto.img}}
-                      style={{ width: 250, height: 150, justifyContent: "center" }}
+                      style={{ width: 250, height: 150, justifyContent: "center", borderRadius : 10 }}
                     />
 
                     <Text style={{ marginBottom: 10 , textAlign : "center", fontSize : 16, fontWeight : "bold" }}>
@@ -160,7 +160,7 @@ HomePage = (props) => {
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
                         <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() => {props.addToFavoris(resto);setLikeResto(!likeResto) }}/>
                       </View>
-                      <Button title=' En savoir plus' color="#16a085" onPress={() => handleClick(resto)} />
+                      <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(resto)} />
                       
                     </View>
                   </View>
@@ -172,10 +172,9 @@ HomePage = (props) => {
           </ScrollView>
         </View>
 
-
-        <View style={{ flex: 1, backgroundColor: '#ecf0f1', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
-              <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 10, marginTop: 20, marginBottom: 20 }}>
-                  Les Mieux Notés
+        <View style={{ flex: 1, backgroundColor: '#FFFFFF', paddingTop: 20, marginLeft: 0, marginRight: 0 }}>
+          <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 10, marginTop: 20, marginBottom: 20 }}>
+            Les mieux Notés
               </Text>
 
              
@@ -184,11 +183,11 @@ HomePage = (props) => {
             {
               restoTriche.tricheur.map((restaurant, i) => {
                 return (
-                  <View style={{ borderWidth: 1, borderColor: '#CCCCCC', marginLeft: 5, marginBottom : 10 }}>
+                  <View style={{ borderWidth: 0.2, borderColor: '#8E8E8E' , marginLeft: 5, marginBottom : 10, borderRadius : 10, backgroundColor : "#FFFFFF"}}>
 
                     <Image
                       source={{uri: restaurant.img}}
-                      style={{ width: 250, height: 150, justifyContent: "center" }}
+                      style={{ width: 250, height: 150, justifyContent: "center", borderRadius : 10  }}
                     />
 
                     <Text style={{ marginBottom: 10 , textAlign : "center", fontSize : 16, fontWeight : "bold" }}>
@@ -206,7 +205,7 @@ HomePage = (props) => {
 
 
                       </View>
-                      <Button title=' En savoir plus' color="#16a085" onPress={() => handleClick(restaurant)} />
+                      <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(restaurant)} />
                       
                     </View>
                   </View>
