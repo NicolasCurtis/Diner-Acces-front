@@ -4,7 +4,6 @@ import {createAppContainer } from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
-//import MapScreens from './screens/mapScreens';
 import Login from './screens/Login'
 import Favoris from './screens/Favoris'
 import HomePage from './screens/HomePage'
