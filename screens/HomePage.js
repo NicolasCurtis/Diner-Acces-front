@@ -168,7 +168,7 @@ HomePage = (props) => {
                     <View >
 
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faHeart}  onPress={() => {props.addToFavoris(resto);setLikeResto(!likeResto) }}/>
+                        <FontAwesomeIcon icon={faHeart}  onPress={() => {props.addToFavoris(resto); setLikeResto(!likeResto) }}/>
                       </View>
                       <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(resto)} />
                       

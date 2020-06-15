@@ -44,13 +44,6 @@ if(props.myRestos == 0){
   return(
 
     <View style={styles.container}>
-      <View style={{ width: 1000, height: 50, backgroundColor: '#001F5A', marginTop: 20 }} >
-        <Text style={{ textAlign: "center", fontSize: 35, color: "#FFCB44" }}>
-          Diner Access
-          </Text>
-      </View>
-      
-      
         {NoRestaurant}
         
       
@@ -185,7 +178,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: "white"
+    backgroundColor: "white",
+    marginTop: 30
   },
 });
 
