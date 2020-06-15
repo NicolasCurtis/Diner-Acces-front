@@ -5,17 +5,21 @@ import { faStar, faHeart, faPhone, faMobileAlt } from '@fortawesome/free-solid-s
 import { Overlay } from 'react-native-elements';
 import ImageModal from 'react-native-image-modal';
 
+import {connect} from 'react-redux';
+
+
+
 
 import dataResto from '../dataResto.json';
 import restoTriche from '../restoTriche.json';
 
-export default HomePage = () => {
+HomePage = (props) => {
 
   const [serch, setSearch] = useState('');
   const [restoList, setRestoList] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [restoModal, setRestoModal] = useState('')
-  const [likeResto, setLikeResto] = useState(false)
+  const [restoModal, setRestoModal] = useState('');
+  const [likeResto, setLikeResto] = useState(false);
 
   var color = { color: '#f1c40f' }
 
@@ -158,7 +162,7 @@ export default HomePage = () => {
                     <View >
 
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() => setLikeResto(!likeResto)}/>
+                        <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() => {props.addToFavoris(resto);setLikeResto(!likeResto) }}/>
                       </View>
                       <Button title=' En savoir plus' color="#001F5A" onPress={() => handleClick(resto)} />
                       
@@ -202,7 +206,9 @@ export default HomePage = () => {
                     <View >
 
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() => setLikeResto(!likeResto)} />
+                        <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() =>{props.addToFavoris(restaurant);setLikeResto(!likeResto) }} />
+
+
                       </View>
                       <Button title=' En savoir plus' color="#001F5A" onPress={() => handleClick(restaurant)} />
                       
@@ -332,3 +338,18 @@ const cardstest = StyleSheet.create({
     fontSize: 16
   }
 })
+
+function mapDispatchToProps(dispatch) {
+    return {
+      addToFavoris: function(restoAdded) {
+        console.log(restoAdded)
+        dispatch({type : 'addResto',
+      restoLiked : restoAdded})
+      }
+    }
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+) (HomePage)

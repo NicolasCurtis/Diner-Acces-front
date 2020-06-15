@@ -23,7 +23,7 @@
       "tel" : "04 78 24 08 52",
       "adresse": "34, cours Franklin Roosevelt 69006 Lyon",
       "desc": "Le restaurant le Théodore est l'adresse chic du cours Franklin Roosevelt dans le 6ème à Lyon. Marco Chopin, patron emblématique de cette belle maison, excelle pour accueillir chacun de ses clients dans une ambiance cosy autour d'une cuisine de qualité.",
-      "type": "Bistrot",
+      "type": "Brasserie",
       "menu": "Dessert du jour ou salade de fruits",
       "site": "Site internet",
       "site_url": "http://www.letheodore.fr/",
@@ -70,7 +70,7 @@
       "tel" : "04 78 42 05 79",
       "adresse": "22, rue Palais Grillet 69002 Lyon",
       "desc": "Amateur des établissements historiques, le nom de Chez Carlo vous est forcément familier. Ce restaurant au coeur de la Presqu’ile, entre la Place Bellecour et les Cordeliers, qui saura encore vous surprendre avec des pizzas traditionnelles cuites au feu de bois et une savoureuse cuisine maison italienne. On aime l’esprit trattoria avec un léger coté vintage à l’intérieur , le four à bois visible du restaurant derrière une belle verrière et la terrasse au calme, un must en centre ville.",
-      "type": "Bouchon lyonnais",
+      "type": "Pizzeria",
       "menu": "L'île flottante aux pralines - 6,50 euros Mousse au chocolat Weiss - 6,50 euros Entremet al cappuccino - 6,50 euros\nSalade de fruits frais - 6,50 euros\nPanna cotta au coulis de fruits rouges - 6,50 euros\nCitron givré - 6,50 euros\nTarte au citron - 6,50 euros\nMoelleux au chocolat Weiss - 7 euros\nTiramisu au café - 7 euros\nCannoli - 7 euros\nLe baba au limoncello - 7 euros\nCafé ou Thé gourmand - 7,50 euros\nCoupe de glace artisanale (Histoire de glace) 1 /2 / 3 boules : 3,00 /4,50 / 6,50 euros\nSorbets : 3 agrumes, poire Williams de Savoie, fraise Mara des bois, pêche de vigne des coteaux du lyonnais\nGlaces : vanille Bourbon de Madagascar, chocolat noir de Tanzanie, caramel beurre fleur de sel de Camargue, pistache de Sicile",
       "horaires": "Midi : 12h00-14h00 Soir : 19h00-22h30 Ouvert jusqu'à 23h les vendredis et samedis soirs"
      },
