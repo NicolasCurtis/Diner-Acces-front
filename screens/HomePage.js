@@ -8,7 +8,9 @@ import { StyleSheet,
   Modal,
   Linking, 
   TouchableOpacity,
-  ImageBackground} from 'react-native'
+  ImageBackground,
+  Alert
+} from 'react-native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {  faHeart, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
 import ImageModal from 'react-native-image-modal';
@@ -35,12 +37,20 @@ HomePage = (props) => {
      setRestoModal(restoEnQuestion)
   }
 
- if (likeResto) {
-  var colorLike = {color : "red"}
- }else {
-   var colorLike = {}
- }
 
+
+ if (likeResto) {
+  Alert.alert(
+    'Ajouté aux Favoris',
+    'Bon appétit :-)',
+    [
+      
+     
+      { text: 'OK', onPress: () => console.log('OK Pressed') }
+    ],
+    { cancelable: false }
+  );
+ }
  
 
   return (
@@ -158,7 +168,7 @@ HomePage = (props) => {
                     <View >
 
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() => {props.addToFavoris(resto);setLikeResto(!likeResto) }}/>
+                        <FontAwesomeIcon icon={faHeart}  onPress={() => {props.addToFavoris(resto);setLikeResto(!likeResto) }}/>
                       </View>
                       <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(resto)} />
                       
@@ -201,7 +211,7 @@ HomePage = (props) => {
                     <View >
 
                       <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faHeart} style={colorLike} onPress={() =>{props.addToFavoris(restaurant);setLikeResto(!likeResto) }} />
+                        <FontAwesomeIcon icon={faHeart}  onPress={() =>{props.addToFavoris(restaurant);setLikeResto(!likeResto) }} />
 
 
                       </View>

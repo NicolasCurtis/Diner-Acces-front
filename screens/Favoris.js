@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, Button, onPressLearnMore, Image, Scr
 import dataResto from '../dataResto.json';
 import restoTriche from '../restoTriche.json';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faStar, faHeart, faPhone, faMobileAlt, faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faHeart, faPhone, faMobileAlt, faTrash, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import ImageModal from 'react-native-image-modal';
 
 import {connect} from 'react-redux';
@@ -34,6 +34,11 @@ var colorLike = {color : "red"}
  var colorLike = {}
 }
 
+var NoRestaurant
+if(props.myRestos == 0){
+  NoRestaurant =<Text style={{flex : 1, fontSize :20, marginTop : 300}}>Aucun restaurant dans vos Favoris<FontAwesomeIcon icon={faUtensils}  /></Text>
+}
+
 
 
   return(
@@ -44,7 +49,11 @@ var colorLike = {color : "red"}
           Diner Access
           </Text>
       </View>
-
+      
+      
+        {NoRestaurant}
+        
+      
       <Modal visible={showModal} transparent={true} animationType="slide">
                       <View style={{backgroundColor : '#C9C7C7', flex : 1}}>
 
@@ -131,7 +140,7 @@ var colorLike = {color : "red"}
 
       <View style={{ flex: 1, paddingTop: 10 }}>
         
-
+      
           
             {
               props.myRestos.map((resto, i) => {
@@ -141,6 +150,7 @@ var colorLike = {color : "red"}
                     <Image
                       source={{uri: resto.img}}
                       style={{ width: 250, height: 150, justifyContent: "center" }}
+                      
                     />
 
                     <Text style={{ marginBottom: 10 , textAlign : "center", fontSize : 16, fontWeight : "bold" }}>
@@ -152,8 +162,10 @@ var colorLike = {color : "red"}
                     </Text>
 
                     <View style={{ marginLeft: 8, alignItems : "center", marginBottom : 10 }}>
-                        <FontAwesomeIcon icon={faTrash} type='delete' onPress={() => {props.deleteToFavoris(resto) }}/>
+                        <FontAwesomeIcon icon={faTrash} type='delete' onPress={() => {props.deleteToFavoris(i) }}/>
                       </View>
+
+                      <Button title=' En savoir plus' color="#EBA41B" onPress={() => handleClick(resto)} />
 
                    
                   </View>
@@ -183,10 +195,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    deleteToFavoris: function(restoAdded) {
-      console.log(restoAdded)
+    deleteToFavoris: function(restoDeleted) {
+      
       dispatch({type : 'deleteResto',
-    restoLiked : restoAdded})
+    unLike : restoDeleted})
     }
   }
 }
