@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, Button, StatusBar, ImageBackground, Alert } from 'react-native';
 
+
 export default function Login({ navigation }) {
 
 
@@ -12,23 +13,28 @@ export default function Login({ navigation }) {
   const [signInEmail, setSignInEmail] = useState('');
   const [signInPassword, setSignInPassword] = useState('');
 
+  const [visible, setVisible] = useState(false);
+
   var regex = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
 
   var handleSubmitSignUp = async (email) => {
 
     const emailCheck = regex.test(email);
+    const toggleOverlay = () => {
+      setVisible(!visible);
+    };
 
     if (emailCheck == false) {
-      Alert.alert(
-        'Email invalide',
-        'veuillez entrer un Email valide :)',
-        [
+     Alert.alert(
+       'Email invalide',
+       'veuillez entrer un Email valide :)',
+       [
+        
 
-
-          { text: 'OK', onPress: () => console.log('OK Pressed') }
-        ],
-        { cancelable: false }
-      );
+         { text: 'OK', onPress: () => console.log('OK Pressed') }
+       ],
+       { cancelable: false }
+     );
     } else {
       const data = await fetch("http://172.17.190.54:3000/sign-up", {
         method: 'POST',

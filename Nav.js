@@ -8,15 +8,17 @@ import Login from './screens/Login'
 import Favoris from './screens/Favoris'
 import HomePage from './screens/HomePage'
 import MapScreens from './screens/mapScreens'
+import information from './screens/information'
 
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons} from '@expo/vector-icons';
 
 
 
 const BottomNavigator = createBottomTabNavigator({
   Accueil: HomePage,
   Map: MapScreens,
-  Favoris: Favoris
+  Favoris: Favoris,
+  Info : information
 },
 {
   defaultNavigationOptions: ({ navigation }) => ({
@@ -27,9 +29,12 @@ const BottomNavigator = createBottomTabNavigator({
       } else if (navigation.state.routeName == 'Favoris') {
         iconName = "md-heart";
       } else if (navigation.state.routeName == 'Accueil') {
-        iconName = "ios-restaurant";} 
+        iconName = "ios-restaurant";
+      } else if (navigation.state.routeName == 'Info') {
+        iconName = "md-person";} 
 
-      return <Ionicons name={iconName} size={25} color={tintColor} />;
+
+      return <Ionicons name={iconName} size={25} color={tintColor} /> 
     },
   }),
   tabBarOptions: {

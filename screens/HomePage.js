@@ -40,7 +40,7 @@ HomePage = (props) => {
   if (likeResto) {
     Alert.alert(
       'Ajouté aux Favoris',
-      'Bon appétit :-)',
+      'Bon appétit :)',
       [
 
 
